@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style type="text/css">
+        body{
+            background-color: rgb(230, 230, 230);
+        }
+        .prodCards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            justify-items: center;
+            align-items: top;
+            margin-top: 50px;
+            gap:min(20px);
+        }
+        .card{
+            position: relative;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            width: 300px;
+            margin: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.429);
+            border-radius: 30px;
+            padding-top: 15px;
+        }
+        .card:hover{
+            background-color: rgba(255, 255, 255, 0.498);
+            .cta{
+                translate: 0px -120px;
+                opacity: 100;
+                transition-duration: 0.2s;
+                filter: blur(0px);
+            }
+            box-shadow:0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition-duration: 0.5s;
+            .price{
+                font-size: 40px;
+                color: rgb(219, 49, 77);
+                span{
+                    font-size: 0px;
+                    font-weight: 100;
+                    text-decoration:line-through;
+                    opacity: 0%;
+                }
+                translate: 5px 0px 0px;
+                rotate: -5deg;
+                transition-duration: 0.2s;
+                border: 2px dashed rgb(219, 49, 77);
+            }
+            .disctag{
+                font-size: 20px;
+                color: white;
+                background-color: rgba(219, 49, 77);
+                box-shadow:0px 5px 5px rgba(0, 0, 0, 0);
+                transition-duration: 0.2s;
+
+
+            }
+        }
+        .prod{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            font-size: 30px;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 800;
+            gap:70px;
+        
+            img{
+                border-radius:20px;
+                width: 300px;
+            }
+            
+        }
+        .cta{
+            display: grid;
+            grid-template-columns:1fr 3fr 1fr;
+            justify-items: center;
+            align-items: center;
+            translate: 0px -80px;
+            width: 250px;
+            opacity: 0;
+            filter: blur(20px);
+        }
+        .addtocart{
+                width: 150px;
+                background-color: rgb(219, 49, 77);
+                color: white;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+        }
+        .addtocart:hover{
+            font-size:15px;
+            font-weight: bold;
+            transition: 0px -5px 0px;
+            transition-duration: 0.2s;
+        }
+        .ctai{
+                width:30px;
+                background-color: rgb(219, 49, 77);
+                color: white;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                margin: 2px;
+                border-radius: 5px;
+        }
+        .ctai:hover{
+            background-color: white;
+            color:rgb(219, 49, 77);
+            border: 1px solid rgb(219, 49, 77);
+            font-size: 20px;
+            transition-duration: 0.3s;
+        }
+        .price{
+            font-size: 25px;
+            font-weight: bold;
+            span{
+                font-size: 20px;
+                font-weight: 100;
+                text-decoration:line-through;
+                opacity: 70%;
+            }
+            margin: 20px;
+        }
+        .disctag{
+            font-size: 20px;
+            color: white;
+            background-color: rgba(219, 49, 77, 0.292);
+            padding: 10px;
+            margin: 10px;
+            position:absolute;
+            top: 0;
+            left: 0;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.668);
+            border-radius:20px;
+            font-weight:600;
+            backdrop-filter: blur(5px);
+            box-shadow:0px 5px 5px rgba(0, 0, 0, 0.126);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Latest Products</h1>
+    </div>
+    <div class="prodCards">
+        <div class="card">
+            <figure class="prod">
+                <img src="https://plus.unsplash.com/premium_photo-1681400781198-467673d27dc6?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <figcaption>Flower Pot</figcaption>
+            </figure>
+            <div class="cta">
+                <div class="ctai"><figure><i class="fa-solid fa-heart"></i></figure></div>
+                <div class="addtocart">add to cart</div>
+                <div class="ctai"><figure><i class="fa-solid fa-share"></i></figure></div>
+            </div>
+            <div class="price">
+                $199
+                <span>273</span>
+            </div>
+            <div class="disctag">-10%</div>
+        </div>
+        <div class="card">
+            <figure class="prod">
+                <img src="https://plus.unsplash.com/premium_photo-1681400781198-467673d27dc6?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <figcaption>Flower Pot</figcaption>
+            </figure>
+            <div class="cta">
+                <div class="ctai"><figure><i class="fa-solid fa-heart"></i></figure></div>
+                <div class="addtocart">add to cart</div>
+                <div class="ctai"><figure><i class="fa-solid fa-share"></i></figure></div>
+            </div>
+            <div class="price">
+                $199
+                <span>273</span>
+            </div>
+            <div class="disctag">-10%</div>
+        </div>
+        <div class="card">
+            <figure class="prod">
+                <img src="https://plus.unsplash.com/premium_photo-1681400781198-467673d27dc6?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <figcaption>Flower Pot</figcaption>
+            </figure>
+            <div class="cta">
+                <div class="ctai"><figure><i class="fa-solid fa-heart"></i></figure></div>
+                <div class="addtocart">add to cart</div>
+                <div class="ctai"><figure><i class="fa-solid fa-share"></i></figure></div>
+            </div>
+            <div class="price">
+                $199
+                <span>273</span>
+            </div>
+            <div class="disctag">-10%</div>
+        </div>
+    </div>
+</body>
+</html>

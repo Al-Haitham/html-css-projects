@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style type="text/css">
+        * {
+            padding: 0;
+            font-family: montserrat,sans-serif;
+        }
+        body{
+            background-image: url('https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFyY2hpdGVjdHVyZXxlbnwwfDB8MHx8fDA%3D');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .topbar{
+            backdrop-filter: blur(5px);
+            background-color: rgba(241, 241, 241, 0.507);
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+            border:2px solid rgba(255, 255, 255, 0.435);
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.144);
+        }
+        .brand{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            font-size:15px;
+            font-weight: bold;
+        }
+        .navbar{
+            text-align: center;
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar>li:hover{
+            font-weight: bold;
+            transition-duration: 0.2s;
+        }
+        button.cta{
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            width: 150px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button.cta:hover{
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.144);
+            background-color:white;
+            color:black;
+            translate: 0px -2px;
+            transition-duration:0.3s;
+        }
+        .hero {
+            height: calc(100vh - 70px);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .hero-content {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            max-width: 700px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.301);
+            margin: 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .hero-content p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn.primary {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .btn.secondary {
+            background: hsla(0, 0%, 100%, 0.5);
+            color: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.336);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn:hover {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.144);
+            background-color:white;
+            color:black;
+            translate: 0px -2px;
+            transition-duration:0.3s;
+        }
+        .dots {
+            position: absolute;
+            bottom: 25px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+        }
+
+        .dot.active {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">
+
+        <figure class="brand">
+            <i class="fa-brands fa-linktree"></i>
+            <figcaption>brandName</figcaption>
+        </figure>
+
+        <ul class="navbar">
+            <li>Home</li>
+            <li>Courses</li>
+            <li>TD</li>
+            <li>Conferences</li>
+            <li>About</li>
+            <button class="cta">Sign-up</buttom>
+        </ul>
+
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue</h1>
+            <p>
+                Explorez une vaste collection de cours et TD.  
+                Connectez-vous pour télécharger et prévisualiser les ressources.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn primary">
+                    Explorer les cours <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <button class="btn secondary">
+                    Voir les TD
+                </button>
+
+                <button class="btn secondary">
+                    Se connecter
+                </button>
+            </div>
+        </div>
+
+        <div class="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+</body>
+</html>

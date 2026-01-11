@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(243, 222, 222);
+        }
+        .heading{
+            text-align: center;
+        }
+        .catg ul{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        .catg li{
+            background-color: brown;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .catg li:hover{
+            background-color: rgb(201, 110, 110);
+            cursor: pointer;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            transition-duration: 0.5s;
+
+        }
+        .foodCard{
+            width: 250px;
+            padding: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.195);
+            border-radius: 20px;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            justify-items: center;
+            align-items: center;
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        .foodCard:hover{
+            background-color: rgba(255, 255, 255, 0.3);
+            translate: 0px -10px ;
+            transition-duration: 0.5s;
+            box-shadow:0px 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid brown;
+            border-radius: 20px;
+            transition-duration: 0.5s;
+        }
+        .foodImg{
+            border-radius: 10px;
+        }
+        .foodImg:hover{
+            border-radius: 10px;
+            translate: 0px -10px ;
+            transition-duration: 0.5s;
+            box-shadow:0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        .foodTitle{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Food Filter App</h1>
+    </div>
+    <div class="catg">
+        <ul>
+            <li>Lunch</li>
+            <li>Dinner</li>
+            <li>Snack</li>
+            <li>Breakfast</li>
+            <li>All</li>
+        </ul>
+    </div>
+    <div class="cards">
+        <figure class="foodCard">
+            <img class="foodImg" src="https://images.unsplash.com/photo-1661083098412-054431ab7112?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <figcaption class="foodTitle">Tajine -- 120DH</figcaption>
+            <p class="foodDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et incidunt nulla, a illum omnis quam, unde veritatis voluptatem, similique quasi repellat perspiciatis! Labore eligendi aut quia illum, quo inventore reiciendis.
+            Architecto, ullam quaerat. Ipsam, sint illum recusandae quos, obcaecati incidunt non amet eaque nisi magni laboriosam voluptatibus quasi dicta quia ex consectetur atque nulla minus aliquid aliquam iste aspernatur minima.</p>
+        </figure>
+        <figure class="foodCard">
+            <img class="foodImg" src="https://images.unsplash.com/photo-1661083098412-054431ab7112?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <figcaption class="foodTitle">Tajine -- 120DH</figcaption>
+            <p class="foodDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et incidunt nulla, a illum omnis quam, unde veritatis voluptatem, similique quasi repellat perspiciatis! Labore eligendi aut quia illum, quo inventore reiciendis.
+            Architecto, ullam quaerat. Ipsam, sint illum recusandae quos, obcaecati incidunt non amet eaque nisi magni laboriosam voluptatibus quasi dicta quia ex consectetur atque nulla minus aliquid aliquam iste aspernatur minima.</p>
+        </figure>
+        <figure class="foodCard">
+            <img class="foodImg" src="https://images.unsplash.com/photo-1661083098412-054431ab7112?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <figcaption class="foodTitle">Tajine -- 120DH</figcaption>
+            <p class="foodDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et incidunt nulla, a illum omnis quam, unde veritatis voluptatem, similique quasi repellat perspiciatis! Labore eligendi aut quia illum, quo inventore reiciendis.
+            Architecto, ullam quaerat. Ipsam, sint illum recusandae quos, obcaecati incidunt non amet eaque nisi magni laboriosam voluptatibus quasi dicta quia ex consectetur atque nulla minus aliquid aliquam iste aspernatur minima.</p>
+        </figure>
+    </div>
+</body>
+</html>
