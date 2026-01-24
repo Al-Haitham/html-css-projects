@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(33, 33, 33);
+            color: white;
+            padding: 10px;
+            padding-inline: 50px;
+            margin: 10px;
+            gap:100px;
+            .logo{
+                font-size: 32px;
+            }
+            .menu{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+            }
+        }
+        .menu li:hover{
+            color: rgb(3, 211, 145);
+            cursor: pointer;
+        }
+
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            
+        }
+
+        .video-item {
+            display: flex;
+            gap: 10px;
+            background: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            align-items: center;
+            transition: 0.2s ease;
+        }
+
+        .video-item:hover {
+            background-color: #f7f8f8;
+            scale: 104%;
+            box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-item video {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .main-video video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            gap: 10px;
+            border-radius: 20px;
+            font-size: 30px;
+            margin: 10px;
+            padding-inline: 20px;
+            direction: rtl;
+            background-color: #1e1e1e26;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            cursor: pointer;
+            color: #848484;
+            transition: 0.2s ease;
+        }
+
+        .rating label:hover{
+            color: rgb(255, 179, 0);
+        }
+        .rating label:hover ~ label{
+            color: rgb(255, 179, 0);
+        }
+        .rating input:checked ~ label{
+            color: rgb(255, 179, 0);
+        }
+    </style>
+</head>
+<body>
+<div class="header rounded-4 col">
+    <div class="logo fw-bold">
+        WeTube
+    </div>
+    <div class="input-group">
+    <input type="search" class="form-control" placeholder="Search...">
+    <button class="btn btn-outline-secondary" type="button">
+        <i class="bi bi-search text-white"></i>
+    </button>
+    </div>
+      <ul class="menu d-flex gap-4 list-unstyled">
+        <li>History</li>
+        <li>Saved</li>
+        <li>Subscriptions</li>
+      </ul>
+    
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="video-list">
+                <div class="playlistTitle fs-3 fw-bold py-1">Playlist</div>
+
+                <div class="video-item">         
+                    <video muted preload="metadata">
+                        <source src="107465-678258871_medium.mp4">
+                    </video>
+                    <div>
+                        <p class="mb-1 fw-bold">Video Title 1</p>
+                        <small class="text-muted">0:10</small>
+                    </div>
+                </div>
+
+                <div class="video-item">
+                    <video muted preload="metadata">
+                        <source src="142815-780943566_medium.mp4">
+                    </video>
+                    <div>
+                        <p class="mb-1 fw-bold">Video Title 2</p>
+                        <small class="text-muted">0:10</small>
+                    </div>
+                </div>
+
+                <div class="video-item">                   
+                    <video muted preload="metadata">
+                        <source src="227976.mp4">
+                    </video>
+                    <div>
+                        <p class="mb-1 fw-bold">Video Title 3</p>
+                        <small class="text-muted">0:10</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="main-video">
+
+                <video controls preload="metadata" id="main-vid" >
+                    <source src="107308-676158771_small.mp4" type="video/mp4">
+                </video>
+
+                <h3 class="mt-3 main-title">Main Video Title</h3>
+
+                <p class="main-descr">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat perferendis adipisci soluta odit necessitatibus voluptatum nisi, officia maxime veritatis voluptates quaerat provident itaque. Possimus, quisquam deserunt. Reiciendis similique pariatur ipsam.
+                </p>
+
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+ </body>
+</html>
